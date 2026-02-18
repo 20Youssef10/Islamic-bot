@@ -1,0 +1,25 @@
+services:
+  # Web service for the bot
+  - type: web
+    name: islamic-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: DISCORD_TOKEN
+        sync: false  # Will be set manually in Render dashboard
+      - key: GUILD_ID
+        sync: false  # Will be set manually in Render dashboard
+    healthCheckPath: /health
+    autoDeploy: true
+    
+  # Optional: Background worker if needed for additional tasks
+  # - type: worker
+  #   name: islamic-bot-worker
+  #   runtime: python
+  #   plan: free
+  #   buildCommand: pip install -r requirements.txt
+  #   startCommand: python worker.py
