@@ -9570,3 +9570,82 @@ aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gatewa
 2026-02-18 15:39:26,474 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 18391013cd9ee7e888475e3966ca2a59).
 2026-02-18 15:39:28,485 - bot.discord_client - INFO - ✅ Logged in as بوت الأدعية والاذكار#2243 (ID: 1459564811183591686)
 2026-02-18 15:39:28,486 - bot.discord_client - INFO - Connected to 1 guilds
+2026-02-23 02:39:51,801 - __main__ - INFO - ==================================================
+2026-02-23 02:39:51,804 - __main__ - INFO - Starting Islamic Bot...
+2026-02-23 02:39:51,804 - __main__ - INFO - ==================================================
+2026-02-23 02:39:51,805 - __main__ - INFO - Starting web server for keep-alive...
+2026-02-23 02:39:53,807 - __main__ - INFO - Initializing database...
+2026-02-23 02:39:53,822 - __main__ - INFO - ✓ Database initialized
+2026-02-23 02:39:53,823 - __main__ - INFO - ✓ Status updater started
+2026-02-23 02:39:53,824 - __main__ - INFO - Creating bot instance...
+2026-02-23 02:39:53,827 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-23 02:39:53,827 - __main__ - INFO - Starting bot...
+2026-02-23 02:39:53,828 - __main__ - INFO - Web dashboard available at: http://0.0.0.0:10000
+2026-02-23 02:39:53,830 - discord.client - INFO - logging in using static token
+2026-02-23 02:39:54,254 - __main__ - ERROR - Error running bot: Improper token has been passed.
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/discord/http.py", line 839, in static_login
+    data = await self.request(Route('GET', '/users/@me'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/discord/http.py", line 773, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 401 Unauthorized (error code: 0): 401: Unauthorized
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/islamic-bot/main.py", line 90, in <module>
+    bot.run(bot.token)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/discord/client.py", line 929, in run
+    asyncio.run(runner())
+  File "/data/data/com.termux/files/usr/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/discord/client.py", line 918, in runner
+    await self.start(token, reconnect=reconnect)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/discord/client.py", line 846, in start
+    await self.login(token)
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/discord/client.py", line 675, in login
+    data = await self.http.static_login(token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/discord/http.py", line 843, in static_login
+    raise LoginFailure('Improper token has been passed.') from exc
+discord.errors.LoginFailure: Improper token has been passed.
+2026-02-23 02:40:51,538 - __main__ - INFO - ==================================================
+2026-02-23 02:40:51,540 - __main__ - INFO - Starting Islamic Bot...
+2026-02-23 02:40:51,541 - __main__ - INFO - ==================================================
+2026-02-23 02:40:51,541 - __main__ - INFO - Starting web server for keep-alive...
+2026-02-23 02:40:53,542 - __main__ - INFO - Initializing database...
+2026-02-23 02:40:53,557 - __main__ - INFO - ✓ Database initialized
+2026-02-23 02:40:53,558 - __main__ - INFO - ✓ Status updater started
+2026-02-23 02:40:53,559 - __main__ - INFO - Creating bot instance...
+2026-02-23 02:40:53,562 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-02-23 02:40:53,562 - __main__ - INFO - Starting bot...
+2026-02-23 02:40:53,563 - __main__ - INFO - Web dashboard available at: http://0.0.0.0:10000
+2026-02-23 02:40:53,564 - discord.client - INFO - logging in using static token
+2026-02-23 02:40:54,310 - bot.discord_client - INFO - Setting up bot...
+2026-02-23 02:40:54,863 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-02-23 02:40:54,865 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-02-23 02:40:54,870 - apscheduler.scheduler - INFO - Added job "ScheduledAzkarService.send_morning_azkar" to job store "default"
+2026-02-23 02:40:54,871 - apscheduler.scheduler - INFO - Added job "ScheduledAzkarService.send_evening_azkar" to job store "default"
+2026-02-23 02:40:54,872 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-23 02:40:54,872 - services.scheduled_azkar_service - INFO - Azkar scheduler started
+2026-02-23 02:40:54,873 - bot.discord_client - INFO - Scheduled azkar service started
+2026-02-23 02:40:54,873 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-02-23 02:40:54,874 - apscheduler.scheduler - INFO - Added job "HourlyMessagesService.send_hourly_message" to job store "default"
+2026-02-23 02:40:54,874 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-23 02:40:54,875 - services.hourly_messages_service - INFO - Hourly Islamic messages scheduler started
+2026-02-23 02:40:54,875 - bot.discord_client - INFO - Hourly messages service started
+2026-02-23 02:41:09,264 - __main__ - INFO - Received shutdown signal, stopping bot...
+2026-02-23 02:41:09,264 - services.scheduled_azkar_service - INFO - Azkar scheduler stopped
+2026-02-23 02:41:09,264 - services.hourly_messages_service - INFO - Hourly messages scheduler stopped
+2026-02-23 02:41:09,265 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-23 02:41:09,265 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-23 02:41:13,194 - __main__ - INFO - Received shutdown signal, stopping bot...
+2026-02-23 02:41:23,332 - __main__ - INFO - Received shutdown signal, stopping bot...
